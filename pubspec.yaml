@@ -39,6 +39,7 @@ dependencies:
   path_provider: 
   open_file: 
   intl: 
+  permission_handler: ^10.2.0
 
 dev_dependencies:
   flutter_test:

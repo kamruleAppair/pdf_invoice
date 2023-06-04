@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:invoice_pdf_flutter/helper/pdf_helper.dart';
 import 'package:invoice_pdf_flutter/helper/pdf_invoice_helper.dart';
@@ -16,6 +18,11 @@ class PdfPage extends StatefulWidget {
 }
 
 class _PdfPageState extends State<PdfPage> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
         backgroundColor: const Color.fromARGB(66, 196, 194, 194),
@@ -110,9 +117,7 @@ class _PdfPageState extends State<PdfPage> {
                         ),
                       ],
                     );
-
                     final pdfFile = await PdfInvoicePdfHelper.generate(invoice);
-
                     PdfHelper.openFile(pdfFile);
                   },
                 ),
